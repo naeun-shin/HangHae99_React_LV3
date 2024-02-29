@@ -1,8 +1,14 @@
 import './App.css';
-import Section from './components/Section';
+import MainSection from './components/MainSection';
+import { ThemeProvider } from 'styled-components';
+import theme from './styles/theme';
 
 function App() {
-  return <Section />;
+  return (
+    <ThemeProvider theme={theme}>
+      <MainSection />
+    </ThemeProvider>
+  );
 }
 
 export default App;

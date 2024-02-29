@@ -3,16 +3,19 @@ import ButtonSection from './buttons/ButtonSection';
 import InputSection from './input/InputSection';
 import SelectSection from './select/SelectSection';
 import ModalSection from './modal/ModalSection';
+import Main from './MainSection.module';
 
-const Section = () => {
+const MainSection = () => {
   return (
     <>
-      <ButtonSection />
-      <InputSection />
-      <ModalSection />
-      <SelectSection />
+      <Main>
+        <ButtonSection />
+        <InputSection />
+        <ModalSection />
+        <SelectSection />
+      </Main>
     </>
   );
 };
 
-export default Section;
+export default MainSection;
