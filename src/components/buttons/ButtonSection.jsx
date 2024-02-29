@@ -1,13 +1,13 @@
 import React from 'react';
 import Button from './Button';
 import { handleGreenLargeButton, handlePinkLargeButton } from './ButtonHandler';
-import { ButtonContent, ButtonBox } from './Button.module';
+import { Content, Box } from '../../styles/commonStyles';
 
 const ButtonSection = () => {
   return (
-    <ButtonContent>
+    <Content>
       <h1>Button</h1>
-      <ButtonBox>
+      <Box>
         <Button
           type='lightGreenLarge'
           text='Large Primary Button'
@@ -15,8 +15,8 @@ const ButtonSection = () => {
         />
         <Button type='lightGreenMedium' text='Medium' />
         <Button type='lightGreenSmall' text='Small' />
-      </ButtonBox>
-      <ButtonBox>
+      </Box>
+      <Box>
         <Button
           type='lightPinkLarge'
           text='Large Negative Button'
@@ -24,8 +24,8 @@ const ButtonSection = () => {
         />
         <Button type='lightPinkMedium' text='Medium' />
         <Button type='lightPinkSmall' text='Small' />
-      </ButtonBox>
-    </ButtonContent>
+      </Box>
+    </Content>
   );
 };
 

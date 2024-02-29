@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
-const ModalContent = styled.div`
+const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
 `;
-const ModalBox = styled.div`
+const Box = styled.div`
   display: flex;
   flex-direction: row;
   gap: 10px;
 `;
 
-export { ModalContent, ModalBox };
+export { Content, Box };

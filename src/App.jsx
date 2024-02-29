@@ -1,4 +1,3 @@
-import './App.css';
 import MainSection from './components/MainSection';
 import { ThemeProvider } from 'styled-components';
 import theme from './styles/theme';

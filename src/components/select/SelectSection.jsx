@@ -1,12 +1,18 @@
 import React from 'react';
+import { SelectSectionBody, SelectBox, SelectContent } from './Select.module';
+
 import Select from './Select';
 
 const SelectSection = () => {
   return (
-    <div>
-      <h1>Select</h1>
-      <Select />
-    </div>
+    <SelectSectionBody>
+      <SelectBox>
+        <h1>Select</h1>
+        <SelectContent>
+          <Select />
+        </SelectContent>
+      </SelectBox>
+    </SelectSectionBody>
   );
 };
 

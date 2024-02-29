@@ -4,6 +4,7 @@ const color = {
   red: 'red',
   black: 'black',
   white: 'white',
+  lightGrey: '#dddddd',
 };
 
 const widthSize = {
@@ -29,6 +30,7 @@ const fontSize = {
   medium: '18px',
   small: '14px',
 };
+
 const theme = {
   color,
   widthSize,

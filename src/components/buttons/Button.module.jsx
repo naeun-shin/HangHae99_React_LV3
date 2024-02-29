@@ -1,16 +1,5 @@
 import styled from 'styled-components';
 
-const ButtonContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-`;
-const ButtonBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-`;
-
 const BaseButtonStyle = styled.button`
   cursor: pointer;
   border-radius: 8px;
@@ -75,4 +64,4 @@ const BaseButtonStyle = styled.button`
   }}
 `;
 
-export { ButtonContent, BaseButtonStyle, ButtonBox };
+export default BaseButtonStyle;
