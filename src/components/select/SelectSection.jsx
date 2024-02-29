@@ -1,7 +1,7 @@
 import React from 'react';
 import { SelectSectionBody, SelectBox, SelectContent } from './Select.module';
 
-import Select from './Select';
+import SelectMain from './SelectMain';
 
 const SelectSection = () => {
   return (
@@ -9,7 +9,7 @@ const SelectSection = () => {
       <SelectBox>
         <h1>Select</h1>
         <SelectContent>
-          <Select />
+          <SelectMain />
         </SelectContent>
       </SelectBox>
     </SelectSectionBody>

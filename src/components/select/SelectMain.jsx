@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
+
 import {
   SelectList,
   SelectButton,
@@ -8,7 +9,7 @@ import {
   ListItem,
 } from './Select.module';
 
-const Select = () => {
+const SelectMain = () => {
   const options = ['리액트', '자바', '노드', '리액트 네이티브'];
 
   const [isOpenList1, setIsOpenList1] = useState(false);
@@ -19,25 +20,6 @@ const Select = () => {
 
   const selectList1Ref = useRef(null);
   const selectList2Ref = useRef(null);
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (
-        selectList1Ref.current &&
-        !selectList1Ref.current.contains(event.target) &&
-        selectList2Ref.current &&
-        !selectList2Ref.current.contains(event.target)
-      ) {
-        setIsOpenList1(false);
-        setIsOpenList2(false);
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
 
   const toggleDropdownList1 = () => {
     setIsOpenList1(!isOpenList1);
@@ -58,6 +40,24 @@ const Select = () => {
     setSelectedOption2(option);
     setIsOpenList2(false);
   };
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        selectList1Ref.current &&
+        !selectList1Ref.current.contains(event.target) &&
+        selectList2Ref.current &&
+        !selectList2Ref.current.contains(event.target)
+      ) {
+        setIsOpenList1(false);
+        setIsOpenList2(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
@@ -74,7 +74,6 @@ const Select = () => {
           ))}
         </SelectListItems>
       </SelectList>
-
       <SelectList>
         <SelectButton onClick={toggleDropdownList2}>
           <SelectTitle>{selectedOption2}</SelectTitle>
@@ -92,4 +91,4 @@ const Select = () => {
   );
 };
 
-export default Select;
+export default SelectMain;

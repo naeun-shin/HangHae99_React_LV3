@@ -4,13 +4,21 @@ import { InputBlock, InputEachBox, InputForm, InputBox } from './Input.module';
 
 const InputSection = () => {
   const [name, setName] = useState('');
-  const [price, setPrice] = useState('');
+  const [price, setPrice] = useState(0);
+
+  const handlePriceChange = (e) => {
+    const priceNum = Number(e.target.value.replace(/,/g, ''));
+
+    if (!Number.isNaN(priceNum)) {
+      setPrice(priceNum.toLocaleString());
+    }
+  };
 
   const handleSubmitClick = () => {
     if (name !== '' && price !== '') {
       const data = {
-        name: name,
-        price: price,
+        name,
+        price,
       };
       alert(JSON.stringify(data));
       setName('');
@@ -38,12 +46,12 @@ const InputSection = () => {
             <InputBlock
               type='text'
               value={price}
-              onChange={(e) => setPrice(e.target.value)}
+              onChange={handlePriceChange}
             />
           </InputEachBox>
           <InputEachBox>
             <Button
-              onClick={() => handleSubmitClick(name, price)}
+              onClick={handleSubmitClick}
               type='lightGreenSmall'
               text='저장'
             />

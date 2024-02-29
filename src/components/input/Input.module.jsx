@@ -23,6 +23,7 @@ const InputBlock = styled.input`
   border-radius: 8px;
   padding-left: 12px;
   padding-right: 12px;
+  margin-left: 10px;
 `;
 
 export { InputForm, InputBlock, InputEachBox, InputBox };

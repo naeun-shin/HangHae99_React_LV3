@@ -3,12 +3,14 @@ import theme from '../../styles/theme';
 
 const SelectSectionBody = styled.div`
   display: block;
+  z-index: 0;
 `;
 const SelectBox = styled.div`
   border: 3px solid ${theme.color.lightGrey};
   height: 200px;
-
+  padding-left: 5px;
   margin-top: 50px;
+  font-size: ${theme.fontSize.small};
 `;
 const SelectContent = styled.div`
   display: flex;
@@ -21,7 +23,7 @@ const SelectList = styled.div`
 const SelectButton = styled.div`
   overflow: hidden;
   position: relative;
-  border: 1px solid rgb(221, 221, 221);
+  border: 1px solid ${theme.color.lightGrey};
   height: 40px;
   width: 300px;
   background-color: rgb(255, 255, 255);
@@ -44,20 +46,19 @@ const SelectListItems = styled.div`
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 5px 0;
   width: 300px;
   z-index: 10;
   display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 10px 0px;
 `;
 
 const ListItem = styled.div`
-  padding: 5px 10px;
+  margin: 10px;
+  padding: 5px 15px;
   cursor: pointer;
   &:hover {
-    background-color: #f0f0f0;
+    background-color: ${theme.color.lightGrey};
   }
 `;
 

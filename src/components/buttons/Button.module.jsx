@@ -53,7 +53,7 @@ const BaseButtonStyle = styled.button`
         border: 3px solid ${theme.color.lightPink};
         width : ${theme.widthSize.small};
         height : ${theme.heightSize.small};
-        font-weight : ${theme.fontWeight.small};
+        font-weight : ${theme.fontWeight.medium};
         background-color : ${theme.color.lightPink};
         color : ${theme.color.red};
         `;
