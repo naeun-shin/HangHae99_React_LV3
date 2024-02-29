@@ -39,7 +39,6 @@ const BaseButtonStyle = styled.button`
         border: 3px solid ${theme.color.lightGreen};
         width : ${theme.widthSize.small};
         height : ${theme.heightSize.small};
-        font-weight : ${theme.fontWeight.small};
         background-color : ${theme.color.lightGreen};
         `;
       case 'lightPinkLarge':
