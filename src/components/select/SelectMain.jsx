@@ -40,6 +40,7 @@ const SelectMain = () => {
     setSelectedOption2(option);
     setIsOpenList2(false);
   };
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (
@@ -66,7 +67,7 @@ const SelectMain = () => {
           <SelectTitle>{selectedOption1}</SelectTitle>
           <SelectArrow>▼</SelectArrow>
         </SelectButton>
-        <SelectListItems ref={selectList1Ref} isOpen={isOpenList1}>
+        <SelectListItems ref={selectList1Ref} open={isOpenList1}>
           {options.map((option, index) => (
             <ListItem key={index} onClick={() => handleSelectList1(option)}>
               {option}
@@ -74,12 +75,13 @@ const SelectMain = () => {
           ))}
         </SelectListItems>
       </SelectList>
+
       <SelectList>
         <SelectButton onClick={toggleDropdownList2}>
           <SelectTitle>{selectedOption2}</SelectTitle>
           <SelectArrow>▼</SelectArrow>
         </SelectButton>
-        <SelectListItems ref={selectList2Ref} isOpen={isOpenList2}>
+        <SelectListItems ref={selectList2Ref} open={isOpenList2}>
           {options.map((option, index) => (
             <ListItem key={index} onClick={() => handleSelectList2(option)}>
               {option}

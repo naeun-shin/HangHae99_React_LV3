@@ -42,7 +42,7 @@ const ModalSecondOpen = styled.div`
 
 const ModalOverlay = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   inset: 0px;
   position: fixed;
   opacity: 0.8;
@@ -75,9 +75,7 @@ const ModalSecondButtonBox = styled.div`
   background-color: ${theme.color.lightGrey};
   cursor: pointer;
 `;
-const ModalSecondContent = styled.div`
-  margin-bottom: 40px;
-`;
+
 export {
   ModalContent,
   ModalBox,
@@ -86,6 +84,5 @@ export {
   ModalOverlay,
   ModalButtonBox,
   ModalSecondButtonBox,
-  ModalSecondContent,
   ModalCloseButton,
 };

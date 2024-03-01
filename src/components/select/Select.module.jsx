@@ -3,7 +3,6 @@ import theme from '../../styles/theme';
 
 const SelectSectionBody = styled.div`
   display: block;
-  z-index: 0;
 `;
 const SelectBox = styled.div`
   border: 3px solid ${theme.color.lightGrey};
@@ -40,7 +39,7 @@ const SelectTitle = styled.div`
 
 const SelectListItems = styled.div`
   position: absolute;
-  top: ${({ isOpen }) => (isOpen ? '100%' : '0')};
+  top: ${({ open }) => (open ? '100%' : '0')};
   left: 0;
   background-color: white;
   border: 1px solid #ccc;
@@ -48,7 +47,7 @@ const SelectListItems = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
   z-index: 10;
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  display: ${({ open }) => (open ? 'block' : 'none')};
   list-style-type: none;
   margin: 10px 0px;
 `;

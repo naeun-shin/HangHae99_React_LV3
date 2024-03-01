@@ -64,4 +64,9 @@ const BaseButtonStyle = styled.button`
   }}
 `;
 
-export default BaseButtonStyle;
+const BaseButtonSpan = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+export { BaseButtonStyle, BaseButtonSpan };
