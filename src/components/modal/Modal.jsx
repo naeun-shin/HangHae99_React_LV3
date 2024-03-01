@@ -30,7 +30,6 @@ const Modal = () => {
 
   const firstModalContent = (
     <>
-      <ModalOverlay />
       <ModalFirstOpen>
         <div>
           닫기와 확인 버튼 2개가 있고, 외부 영역을 눌러도 모달이 닫히지 않아요.
@@ -49,7 +48,6 @@ const Modal = () => {
 
   const secondModalContent = (
     <>
-      <ModalOverlay />
       <ModalSecondOpen>
         <div>
           닫기 버튼 1개가 있고,
