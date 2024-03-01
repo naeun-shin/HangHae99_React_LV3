@@ -1,10 +1,13 @@
 import React from 'react';
+import Modal from './Modal';
+import { ModalContent } from './Modal.module';
 
 const ModalSection = () => {
   return (
-    <div>
+    <ModalContent>
       <h1>Modal</h1>
-    </div>
+      <Modal />
+    </ModalContent>
   );
 };
 
