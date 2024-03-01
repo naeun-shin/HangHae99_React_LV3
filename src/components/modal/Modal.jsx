@@ -41,11 +41,7 @@ const Modal = () => {
             text='닫기'
             onClick={handleModalClose}
           />
-          <Button
-            type='lightPinkSmall'
-            text='확인'
-            onClick={handleModalClose}
-          />
+          <Button type='lightPinkSmall' text='확인' />
         </ModalButtonBox>
       </ModalFirstOpen>
     </>

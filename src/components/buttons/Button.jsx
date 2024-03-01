@@ -5,11 +5,11 @@ import { LuBellDot } from 'react-icons/lu';
 
 const Button = ({ onClick, type, text }) => {
   let icon = null;
-  switch (type) {
-    case 'lightGreenLarge':
+  switch (text) {
+    case 'Large Primary Button':
       icon = <IoIosArrowForward />;
       break;
-    case 'lightPinkLarge':
+    case 'Large Negative Button':
       icon = <LuBellDot />;
       break;
     default:

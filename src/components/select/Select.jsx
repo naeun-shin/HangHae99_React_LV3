@@ -9,7 +9,7 @@ import {
   ListItem,
 } from './Select.module';
 
-const SelectMain = () => {
+const Select = () => {
   const options = ['리액트', '자바', '노드', '리액트 네이티브'];
 
   const [isOpenList1, setIsOpenList1] = useState(false);
@@ -93,4 +93,4 @@ const SelectMain = () => {
   );
 };
 
-export default SelectMain;
+export default Select;

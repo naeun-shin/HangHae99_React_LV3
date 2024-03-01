@@ -4,7 +4,6 @@ const BaseButtonStyle = styled.button`
   cursor: pointer;
   border-radius: 8px;
   padding: 1px 6px;
-  /* 버튼 컴포넌트에 따른 디자인 변경 */
   ${({ $type, theme }) => {
     switch ($type) {
       case 'lightGreenLarge':

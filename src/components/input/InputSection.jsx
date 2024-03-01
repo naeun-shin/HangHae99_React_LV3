@@ -8,9 +8,8 @@ const InputSection = () => {
 
   const handlePriceChange = (e) => {
     const priceNum = Number(e.target.value.replace(/,/g, ''));
-
     if (!Number.isNaN(priceNum)) {
-      setPrice(priceNum.toLocaleString());
+      setPrice(priceNum);
     }
   };
 
@@ -18,11 +17,11 @@ const InputSection = () => {
     if (name !== '' && price !== '') {
       const data = {
         name,
-        price,
+        price: price.toString(),
       };
       alert(JSON.stringify(data));
       setName('');
-      setPrice('');
+      setPrice(0);
     } else {
       alert('값이 비어있습니다!');
     }
@@ -45,7 +44,7 @@ const InputSection = () => {
             <label>가격</label>
             <InputBlock
               type='text'
-              value={price}
+              value={price.toLocaleString()}
               onChange={handlePriceChange}
             />
           </InputEachBox>

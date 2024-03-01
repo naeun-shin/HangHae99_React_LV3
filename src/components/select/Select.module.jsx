@@ -33,20 +33,21 @@ const SelectButton = styled.div`
   padding: 0px 28px;
   cursor: pointer;
 `;
+
 const SelectTitle = styled.div`
   display: block;
 `;
 
 const SelectListItems = styled.div`
   position: absolute;
-  top: ${({ open }) => (open ? '100%' : '0')};
+  /* top: ${({ open }) => (open ? '100%' : '0')}; */
   left: 0;
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
-  z-index: 10;
+  /* z-index: 10; */
   display: ${({ open }) => (open ? 'block' : 'none')};
   list-style-type: none;
   margin: 10px 0px;

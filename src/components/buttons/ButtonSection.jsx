@@ -1,9 +1,15 @@
 import React from 'react';
 import Button from './Button';
-import { handleGreenLargeButton, handlePinkLargeButton } from './ButtonHandler';
 import { Content, Box } from '../../styles/commonStyles';
 
 const ButtonSection = () => {
+  const handleGreenLargeButton = () => {
+    alert('버튼을 만들어보세요');
+  };
+  const handlePinkLargeButton = () => {
+    prompt('어렵나요?');
+  };
+
   return (
     <Content>
       <h1>Button</h1>
