@@ -3,8 +3,10 @@ import theme from '../../styles/theme';
 
 const SelectSectionBody = styled.div`
   display: block;
+  position: relative;
 `;
 const SelectBox = styled.div`
+  overflow: hidden;
   border: 3px solid ${theme.color.lightGrey};
   height: 200px;
   padding-left: 5px;
@@ -16,12 +18,10 @@ const SelectContent = styled.div`
   gap: 10px;
 `;
 const SelectList = styled.div`
-  position: relative;
+  /* position: relative; */
 `;
 
 const SelectButton = styled.div`
-  overflow: hidden;
-  position: relative;
   border: 1px solid ${theme.color.lightGrey};
   height: 40px;
   width: 300px;
@@ -39,15 +39,14 @@ const SelectTitle = styled.div`
 `;
 
 const SelectListItems = styled.div`
-  position: absolute;
-  /* top: ${({ open }) => (open ? '100%' : '0')}; */
+  position: ${({ type }) => (type === 'two' ? 'relative' : 'absolute')};
   left: 0;
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
-  /* z-index: 10; */
+  z-index: 10;
   display: ${({ open }) => (open ? 'block' : 'none')};
   list-style-type: none;
   margin: 10px 0px;
