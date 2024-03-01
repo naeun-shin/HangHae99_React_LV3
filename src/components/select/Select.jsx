@@ -67,7 +67,7 @@ const Select = () => {
           <SelectTitle>{selectedOption1}</SelectTitle>
           <SelectArrow>▼</SelectArrow>
         </SelectButton>
-        <SelectListItems ref={selectList1Ref} open={isOpenList1}>
+        <SelectListItems ref={selectList1Ref} open={isOpenList1} type='one'>
           {options.map((option, index) => (
             <ListItem key={index} onClick={() => handleSelectList1(option)}>
               {option}
@@ -81,7 +81,7 @@ const Select = () => {
           <SelectTitle>{selectedOption2}</SelectTitle>
           <SelectArrow>▼</SelectArrow>
         </SelectButton>
-        <SelectListItems ref={selectList2Ref} open={isOpenList2}>
+        <SelectListItems ref={selectList2Ref} open={isOpenList2} type='two'>
           {options.map((option, index) => (
             <ListItem key={index} onClick={() => handleSelectList2(option)}>
               {option}
